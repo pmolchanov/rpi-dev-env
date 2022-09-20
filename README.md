@@ -74,7 +74,7 @@ fi
 ## Add additional utility software
 
 ### File Manager
-`sudo apt install thunar`
+`sudo apt install thunar thunar-archive-plugin`
 
 ### Browser
 `sudo apt install chromium-browser`
@@ -105,6 +105,23 @@ Host github.com
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install nodejs
 ```
+
+### mitmproxy
+
+Installation
+
+* `sudo apt install python3-pip`
+* `sudo pip3 install mitmproxy`
+
+Install Root CA certificate
+* `mitmweb --no-open-web-browser`
+* `chromium-browser --proxy-server=localhost:8080`
+* Download Linux root certificate from `http://mitm.it`
+* Follow installation instructions
+* Navigate to `chrome://settings/certificates`
+* Select the Authorities tab
+* Click the Import button  
+
 
 ### Password Manager
 `sudo apt install keepassxc`
